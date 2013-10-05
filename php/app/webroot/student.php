@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['student-technology-submit'])) {
     unset($_POST['student-technology-submit']);
     updateStudentTechnologies();
@@ -7,14 +6,37 @@ if (isset($_POST['student-technology-submit'])) {
 
 $technologies = getTechnologyList();
 $student_technologies = getStudentTechnologies();
-
-echo '<h2>Select Used Technologies</h2>';
-echo '<form name="used technologies" method="post">';
-foreach ($technologies as $technology) {
-    $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
-    echo '<input type="checkbox" name="' . $technology . '" value=1 '
-    . $is_checked . ' >' . $technology . '<br>';
-}
-echo '<input type="submit" name="student-technology-submit" value="Save Changes">';
-echo '</form>';
 ?>
+<div class="container"><div class="page-header"></div>
+    <h3>Technologies Used</h3>
+    <form name="used technologies" method="post">
+        <?php
+        for ($i = 0; $i < count($technologies);) {
+            print "<div class='row'>";
+            if ($i < count($technologies)) {
+                $technology = $technologies[$i];
+                $i++;
+                $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
+                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</div>";
+            }
+            if ($i < count($technologies)) {
+                $technology = $technologies[$i];
+                $i++;
+                $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
+                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</div>";
+            }
+            if ($i < count($technologies)) {
+                $technology = $technologies[$i];
+                $i++;
+                $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
+                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</div>";
+            }
+            print "</div>";
+        }
+        ?>
+        <input type="submit" name="student-technology-submit" value="Save Changes">
+    </form>
+</div>
