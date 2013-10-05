@@ -25,6 +25,6 @@
     <?php endforeach; ?>
     <!-- Tale Algorithm Run Point -->
     <li>
-        <a href="http://localhost/sep_2013/web/tale.php" class="assistant tale_button" style="background-image: url(/img/admin_icons/restart.png);background-repeat: no-repeat; background-position: center 50px; background-size: 50%;">Run TALE</a>
+        <a href="/tale.php" class="assistant tale_button" style="background-image: url(/img/admin_icons/restart.png);background-repeat: no-repeat; background-position: center 50px; background-size: 50%;">Run TALE</a>
     </li>
 </ul>
