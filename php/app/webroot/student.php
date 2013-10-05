@@ -7,7 +7,7 @@ if (isset($_POST['student-technology-submit'])) {
 $technologies = getTechnologyList();
 $student_technologies = getStudentTechnologies();
 ?>
-<div class="container"><div class="page-header"></div>
+<div class="container">
     <h3>Technologies Used</h3>
     <form name="used technologies" method="post">
         <?php
@@ -37,10 +37,10 @@ $student_technologies = getStudentTechnologies();
             print "</div>";
         }
         ?>
-        <div class="control-group">
+        <div class="control-group span12 pagination-centered">
             <label class="control-label"></label>
             <div class="controls">
-                <button type="submit" class="btn btn-success" name="student-technology-submit" value="Save Changes">
+                <button type="submit" class="btn btn-success" name="student-technology-submit" value="Save Changes">Save Changes</button>
             </div>
         </div>
     </form>
