@@ -46,7 +46,7 @@ if ($client->getAccessToken()) {
     if (isset($user['picture'])) {
         $img = filter_var($user['picture'], FILTER_VALIDATE_URL);
     }
-    
+
     // The access token may have been updated lazily.
     $_SESSION['token'] = $client->getAccessToken();
     $_SESSION['client'] = $client;
@@ -65,7 +65,8 @@ if ($client->getAccessToken()) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-
+        <link rel="shortcut icon" href="">
+        
         <title>Synoptic Assesment Panel Builder</title>
 
         <!-- Bootstrap core CSS -->
@@ -95,7 +96,8 @@ if ($client->getAccessToken()) {
                 $image = $_SESSION['img'];
                 print "<div class='navbar-brand'><img src='$image?sz=50'></div>";
                 $name = $_SESSION['name'];
-		print "<div class='navbar-brand'>Welcome $name</div>";
+                $role = "(" . str_replace("_", " ", strtolower($_SESSION['role'])) . ")";
+                print "<div class='navbar-brand'>Welcome $name <br> $role</div>";
                 print "</div>";
                 print "<div class='navbar-collapse collapse'>";
                 print "<ul class='nav navbar-nav navbar-right'>";
