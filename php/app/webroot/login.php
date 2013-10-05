@@ -93,7 +93,7 @@ if ($client->getAccessToken()) {
                 print "<div class='container'>";
                 print "<div class='navbar-header'>";
                 $image = $_SESSION['img'];
-                print "<div class='navbar-brand'><img src=$image?size=50'></div>";
+                print "<div class='navbar-brand'><img src='$image?sz=50'></div>";
                 $name = $_SESSION['name'];
 		print "<div class='navbar-brand'>Welcome $name</div>";
                 print "</div>";
