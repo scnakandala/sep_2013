@@ -19,19 +19,19 @@
         <meta charset="utf-8">
         <title><?php echo isset($pluralHumanName) ? str_replace('Admin ', '', $pluralHumanName) . ' - ' : '' ?><?php echo __('Admin'); ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php echo $this->Html->css('/Admin/css/bootstrap'); ?>
-        <?php echo $this->Html->css('/Admin/css/bootstrap-wysihtml5-0.0.2'); ?>
-        <?php echo $this->Html->css('/Admin/css/datepicker'); ?>
-        <?php echo $this->Html->css('/Admin/css/bootstrap-responsive'); ?>
-        <?php echo $this->Html->css('/Admin/css/styles'); ?>        
-        <?php echo $this->Html->script('/Admin/js/jquery'); ?>
-        <?php echo $this->Html->script('/Admin/js/advanced'); ?>
-        <?php echo $this->Html->script('/Admin/js/wysihtml5-0.3.0_rc2'); ?>
-        <?php echo $this->Html->script('/Admin/js/bootstrap.min'); ?>
-        <?php echo $this->Html->script('/Admin/js/bootstrap-wysihtml5-0.0.2'); ?>
-        <?php echo $this->Html->script('/Admin/js/bootstrap-datepicker'); ?>
-        <?php echo $this->Html->script('/Admin/js/jquery.dataTables'); ?>
-        <?php echo $this->Html->script('/Admin/js/scripts'); ?>
+        <?php echo $this->Html->css('/css/bootstrap'); ?>
+        <?php echo $this->Html->css('/css/bootstrap-wysihtml5-0.0.2'); ?>
+        <?php echo $this->Html->css('/css/datepicker'); ?>
+        <?php echo $this->Html->css('/css/bootstrap-responsive'); ?>
+        <?php echo $this->Html->css('/css/styles'); ?>        
+        <?php echo $this->Html->script('/js/jquery'); ?>
+        <?php echo $this->Html->script('/js/advanced'); ?>
+        <?php echo $this->Html->script('/js/wysihtml5-0.3.0_rc2'); ?>
+        <?php echo $this->Html->script('/js/bootstrap.min'); ?>
+        <?php echo $this->Html->script('/js/bootstrap-wysihtml5-0.0.2'); ?>
+        <?php echo $this->Html->script('/js/bootstrap-datepicker'); ?>
+        <?php echo $this->Html->script('/js/jquery.dataTables'); ?>
+        <?php echo $this->Html->script('/js/scripts'); ?>
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
