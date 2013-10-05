@@ -46,23 +46,7 @@ if ($client->getAccessToken()) {
     if (isset($user['picture'])) {
         $img = filter_var($user['picture'], FILTER_VALIDATE_URL);
     }
-    $personMarkup = "
-          <table border='0'>
-                  <tr>
-                        <td rowspan='2'>
-                                <img src='$img?sz=50'>
-                        </td>
-                        <td>
-                                Welcome $name
-                        </td>
-                  </tr>
-                  <tr>
-                        <td>
-                                ( $email )
-                        </td>
-                  </tr>
-          </table>
-          ";
+    
     // The access token may have been updated lazily.
     $_SESSION['token'] = $client->getAccessToken();
     $_SESSION['client'] = $client;
@@ -94,9 +78,6 @@ if ($client->getAccessToken()) {
     <body>
         <div class="container">            
             <?php
-            if (isset($personMarkup)) {
-                print "$personMarkup";
-            }
             if (isset($authUrl)) {
                 print "<div class='header'>";
                 print "<ul class='nav nav-pills pull-right'>";
@@ -108,8 +89,18 @@ if ($client->getAccessToken()) {
                 print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Sign up using Google</a></p>";
                 print "</div>";
             } else {
-                print "<a class='logout' href='?logout'>Logout</a>";
-                print "<br>";
+                print "<div class='navbar navbar-default navbar-fixed-top'>";
+                print "<div class='container'>";
+                print "<div class='navbar-header'>";
+                $image = $_SESSION['img'];
+                print "<div class='navbar-brand'><img src='$image'?sz=50'></div>";
+                $name = $_SESSION['name'];
+		print "<div class='navbar-brand'>Welcome '$name'</div>";
+                print "</div>";
+                print "<div class='navbar-collapse collapse'>";
+                print "<ul class='nav navbar-nav navbar-right'>";
+                print "<li class='active'><a href='?logout'>Logout</a></li>";
+                print "</ul></div></div>";
                 if ($_SESSION['role'] == 'INTERNAL_EVALUATOR' || $_SESSION['role'] == 'EXTERNAL_EVALUATOR') {
                     include_once './evaluator.php';
                 } else if ($_SESSION['role'] == 'STUDENT') {
