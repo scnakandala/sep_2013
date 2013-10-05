@@ -37,7 +37,8 @@ $student_technologies = getStudentTechnologies();
             print "</div>";
         }
         ?>
-        <div class="control-group span12 pagination-centered">
+        <br>
+        <div class="control-group">
             <label class="control-label"></label>
             <div class="controls">
                 <button type="submit" class="btn btn-success" name="student-technology-submit" value="Save Changes">Save Changes</button>
