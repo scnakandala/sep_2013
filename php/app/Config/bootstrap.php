@@ -184,3 +184,6 @@ CakeLog::config('error', array(
  * Load DebugKit plugin
  */
 CakePlugin::load('DebugKit');
+
+// Utility should be loaded first
+CakePlugin::load('Admin', array('bootstrap' => true));
