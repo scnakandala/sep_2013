@@ -17,7 +17,7 @@ $client = new Google_Client();
 $client->setApplicationName("Google UserInfo PHP Starter Application");
 $client->setClientId('604606516848.apps.googleusercontent.com');
 $client->setClientSecret('CWovFOGBagmpNzWX_aG5kF-k');
-$client->setRedirectUri('http://localhost/sep_2013/web');
+$client->setRedirectUri('http://tale-scn.rhcloud.com/');
 $client->setDeveloperKey('AIzaSyDE2o-akjQrFc9IkXQfWGiDAp9KMIt5hPA');
 $oauth2 = new Google_Oauth2Service($client);
 
@@ -28,9 +28,6 @@ if (isset($_SESSION['token'])) {
     if (isset($_GET['code'])) {
         $client->authenticate($_GET['code']);
         $_SESSION['token'] = $client->getAccessToken();
-        //$redirect = 'http://localhost/sep_2013/web';
-        //header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
-        //return;
     }
 }
 
