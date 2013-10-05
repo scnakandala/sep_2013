@@ -99,32 +99,28 @@ if ($client->getAccessToken()) {
                 </ul>
                 <h3 class="text-muted">Department of Computer Science & Engineering <br> University of Moratuwa</h3>
             </div>
-
-            <div class="jumbotron">
-                <h1>Synoptic Assesment Panel Builder</h1>
-
-                <?php
-                if (isset($personMarkup)) {
-                    print "$personMarkup";
+            <?php
+            if (isset($personMarkup)) {
+                print "$personMarkup";
+            }
+            if (isset($authUrl)) {
+                print "<div class='jumbotron'>";
+                print "<h1>Synoptic Assesment Panel Builder</h1>";
+                print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Sign up using Google</a></p>";
+                print "</div>";
+            } else {
+                print "<a class='logout' href='?logout'>Logout</a>";
+                print "<br>";
+                if ($_SESSION['role'] == 'INTERNAL_EVALUATOR' || $_SESSION['role'] == 'EXTERNAL_EVALUATOR') {
+                    include_once './evaluator.php';
+                } else if ($_SESSION['role'] == 'STUDENT') {
+                    include_once './student.php';
                 }
-                if (isset($authUrl)) {
-                    print "<div class='jumbotron'>";
-                    print "<h1>Synoptic Assesment Panel Builder</h1>";
-                    print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Sign up using Google</a></p>";
-                    print "</div>";
-                } else {
-                    print "<a class='logout' href='?logout'>Logout</a>";
-                    print "<br>";
-                    if ($_SESSION['role'] == 'INTERNAL_EVALUATOR' || $_SESSION['role'] == 'EXTERNAL_EVALUATOR') {
-                        include_once './evaluator.php';
-                    } else if ($_SESSION['role'] == 'STUDENT') {
-                        include_once './student.php';
-                    }
-                }
-                ?>
-                <div class="footer">
-                    <p style="text-align:center;">Developed by: <a href="http://www.linkedin.com/profile/view?id=203565354">Supun Nakandala</a></p>
-                </div>
-            </div> 
+            }
+            ?>
+            <div class="footer">
+                <p style="text-align:center;">Developed by: <a href="http://www.linkedin.com/profile/view?id=203565354">Supun Nakandala</a></p>
+            </div>
+        </div> 
     </body>
 </html>
