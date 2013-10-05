@@ -102,7 +102,7 @@ class AdminAppController extends AppController {
         }
 
         parent::beforeFilter();
-        $iconPath = APP . 'Plugin' . DS . 'Admin' . DS . 'webroot' . DS . 'img' . DS . 'admin_icons';
+        $iconPath = APP . DS . 'webroot' . DS . 'img' . DS . 'admin_icons';
         $iconFolder = new Folder($iconPath);
         $iconsInFolder = $iconFolder->find('.*png', true);
         foreach ($iconsInFolder as $key => $value) {
