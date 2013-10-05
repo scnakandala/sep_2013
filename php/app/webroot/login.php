@@ -81,7 +81,6 @@ if ($client->getAccessToken()) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.png">
 
         <title>Synoptic Assesment Panel Builder</title>
 
@@ -93,17 +92,17 @@ if ($client->getAccessToken()) {
     </head>
 
     <body>
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                </ul>
-                <h3 class="text-muted">Department of Computer Science & Engineering <br> University of Moratuwa</h3>
-            </div>
+        <div class="container">            
             <?php
             if (isset($personMarkup)) {
                 print "$personMarkup";
             }
             if (isset($authUrl)) {
+                print "<div class='header'>";
+                print "<ul class='nav nav-pills pull-right'>";
+                print "</ul>";
+                print "<h3 class='text-muted'>Department of Computer Science & Engineering <br> University of Moratuwa</h3>";
+                print "</div>";
                 print "<div class='jumbotron'>";
                 print "<h1>Synoptic Assesment Panel Builder</h1>";
                 print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Sign up using Google</a></p>";
