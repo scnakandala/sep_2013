@@ -17,26 +17,31 @@ $student_technologies = getStudentTechnologies();
                 $technology = $technologies[$i];
                 $i++;
                 $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
-                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
-                . $is_checked . ' >' . $technology . "</div>";
+                echo '<div class="col-md-4"><label class="checkbox"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</label></div>";
             }
             if ($i < count($technologies)) {
                 $technology = $technologies[$i];
                 $i++;
                 $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
-                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
-                . $is_checked . ' >' . $technology . "</div>";
+                echo '<div class="col-md-4"><label class="checkbox"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</label></div>";
             }
             if ($i < count($technologies)) {
                 $technology = $technologies[$i];
                 $i++;
                 $is_checked = in_array($technology, $student_technologies) ? " checked" : "";
-                echo '<div class="col-md-4"><input type="checkbox" name="' . $technology . '" value=1 '
-                . $is_checked . ' >' . $technology . "</div>";
+                echo '<div class="col-md-4"><label class="checkbox"><input type="checkbox" name="' . $technology . '" value=1 '
+                . $is_checked . ' >' . $technology . "</label></div>";
             }
             print "</div>";
         }
         ?>
-        <input type="submit" name="student-technology-submit" value="Save Changes">
+        <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+                <button type="submit" class="btn btn-success" name="student-technology-submit" value="Save Changes">
+            </div>
+        </div>
     </form>
 </div>
