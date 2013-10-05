@@ -102,7 +102,7 @@ if ($client->getAccessToken()) {
                 print "<div class='navbar-collapse collapse'>";
                 print "<ul class='nav navbar-nav navbar-right'>";
                 print "<li class='active'><a href='?logout'>Logout</a></li>";
-                print "</ul><hr></div></div>";
+                print "</ul></div><hr></div>";
                 if ($_SESSION['role'] == 'INTERNAL_EVALUATOR' || $_SESSION['role'] == 'EXTERNAL_EVALUATOR') {
                     include_once './evaluator.php';
                 } else if ($_SESSION['role'] == 'STUDENT') {
