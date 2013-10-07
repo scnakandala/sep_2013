@@ -65,7 +65,6 @@ if ($client->getAccessToken()) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="">
         
         <title>Synoptic Assesment Panel Builder</title>
 
@@ -87,7 +86,7 @@ if ($client->getAccessToken()) {
                 print "</div>";
                 print "<div class='jumbotron'>";
                 print "<h1>Synoptic Assesment Panel Builder</h1>";
-                print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Sign up using Google</a></p>";
+                print "<p><a class='btn btn-lg btn-success' href='$authUrl'>Login using Google</a></p>";
                 print "</div>";
             } else {
                 print "<div class='navbar navbar-default navbar-fixed-top'>";
