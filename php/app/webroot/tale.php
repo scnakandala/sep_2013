@@ -29,7 +29,7 @@ require_once './classes/Manager.php';
 //$end_row = $end_row . "\n";
 //
 //$evaluator_time_slot_file_name = "EvaluatorTimeSlotMatrix.csv";
-//$file = fopen("./" . $evaluator_time_slot_file_name, 'wb');
+//$file = fopen("./resources/" . $evaluator_time_slot_file_name, 'wb');
 //fwrite($file, $start_row);
 //fwrite($file, $end_row);
 //
@@ -65,7 +65,7 @@ require_once './classes/Manager.php';
 //
 ///* * ****************Creating External Evaluator Choices File******************** */
 //$evaluator_choices_file_name = "ExternalEvaluatorChoices.csv";
-//$file = fopen("./" . $evaluator_choices_file_name, 'wb');
+//$file = fopen("./resources/" . $evaluator_choices_file_name, 'wb');
 //fwrite($file, "Technology,Number of projects");
 //foreach ($internalEvaluators as $key => $internalEvaluator) {
 //    fwrite($file, "," . $internalEvaluator);
@@ -95,7 +95,7 @@ require_once './classes/Manager.php';
 //
 ///* * ********************Creating Mark Sheet Allocations.csv********************* */
 //$marksheet_allocations_file_name = "Mark_sheet_allocations.csv";
-//$file = fopen("./" . $marksheet_allocations_file_name, 'wb');
+//$file = fopen("./resources/" . $marksheet_allocations_file_name, 'wb');
 //fwrite($file, "Index Number,Name with Initials,Mid");
 //foreach ($internalEvaluators as $key => $internalEvaluator) {
 //    fwrite($file, "," . $internalEvaluator);
@@ -149,7 +149,7 @@ require_once './classes/Manager.php';
 new Manager();
 
 $file_name = 'value.csv';
-$file_url = 'http://localhost/sep_2013/web/' . $file_name;
+$file_url = 'http://localhost/sep_2013/web/resources/' . $file_name;
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary");
 header("Content-disposition: attachment; filename=\"" . $file_name . "\"");

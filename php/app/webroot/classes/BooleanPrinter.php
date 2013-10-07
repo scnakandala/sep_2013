@@ -7,6 +7,8 @@
  * Version 1.0 released 6 August 2013
  */
 
+require_once 'config.php';
+
 /**
  * Boolean Printer Class
  */

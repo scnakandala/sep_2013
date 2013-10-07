@@ -7,6 +7,7 @@
  * Copyright (c) 2013 Supun Nakandala
  * Version 1.0 released 22 july 2013
  */
+require_once 'config.php';
 require_once ROOT_DIR . '/classes/HungarianAlgorithm.php';
 require_once ROOT_DIR . '/classes/PanelBuilder.php';
 require_once ROOT_DIR . '/classes/FileWriter.php';
@@ -223,11 +224,11 @@ class AssignmentAlgoAdapter {
         }
 
         //Write the key
-        $keyWriter = new FileWriter("../key.txt");
+        $keyWriter = new FileWriter(ROOT_DIR . "/resources/key.txt");
         $keyWriter->writeLines($keyLines);
 
         //Write the matrix
-        $valueWriter = new FileWriter("../value.csv");
+        $valueWriter = new FileWriter(ROOT_DIR . "/resources/value.csv");
         $title = array('Assignment', 'Internal', 'External');
         $valueWriter->writeStringMatrix($title, $keyLines, $data);
     }

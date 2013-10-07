@@ -7,7 +7,7 @@
  * Copyright (c) 2013 Supun Nakandala
  * Version 1.0 released 10 August 2013
  */
-
+require_once 'config.php';
 require_once ROOT_DIR . '/classes/TimeSlotMatrixManager.php';
 require_once ROOT_DIR . '/classes/PanelSlot.php';
 require_once ROOT_DIR . '/classes/PanelMotiffManager.php';
@@ -76,7 +76,7 @@ class PanelBuilder {
         $this->panelGeneration2 = array();
 
         $panel_motiffs = PanelMotiffManger::getInstance()->getData();
-        foreach ($panel_motiffs as $key=>$panel_motiff){
+        foreach ($panel_motiffs as $key=>$panel_motiff){            
             $this->createPanelMotiff($panel_motiff[0], $panel_motiff[1], $panel_motiff[2]);
         }
         $categoryLength = array();

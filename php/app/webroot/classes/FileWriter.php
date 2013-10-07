@@ -7,6 +7,7 @@
  * Version 1.0 released 6 August 2013
  */
 
+require_once 'config.php';
 
 /**
  * FileWriter Class
@@ -73,12 +74,12 @@ class FileWriter {
     public function writeStringMatrix($horizental, $vertical, $matrix) {
         $lines = array();
         // first line
-        $line = ""; //there is an empty space at the begining ?
+        $line = ","; //there is an empty space at the begining
         for($i=0;$i<count($horizental);$i++) {
             $line .= $horizental[$i] . ",";
         }
         array_push($lines, $line);
-        
+
         //rest of the lines
         for($i=0;$i<count($vertical);$i++) {
             $line = $vertical[$i] . ",";

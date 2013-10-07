@@ -7,6 +7,8 @@
  * Version 1.0 released 20 july 2013
  */
 
+require_once 'config.php';
+
 /**
  * ExternalEvaluatorMatrixManager class
  */

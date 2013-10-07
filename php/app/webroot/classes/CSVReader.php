@@ -7,6 +7,7 @@
  * Version 1.0 released 17 july 2013
  */
 
+require_once 'config.php';
 require_once ROOT_DIR . '/libraries/ParseCSV.php';
 
 /**

@@ -7,6 +7,7 @@
  * Copyright (c) 2013 Supun Nakandala
  * Version 1.0 released 22 july 2013
  */
+require_once 'config.php';
 
 /**
  * Student class
